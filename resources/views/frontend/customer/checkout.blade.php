@@ -318,14 +318,6 @@
     });
 </script>
 
-
-
-
-
-
-
-
-
     {{-- <script>
         const checkboxes = document.getElementsByName("ship_check");
 
@@ -407,7 +399,6 @@
                     $('.city2').html(data);
                 }
             });
-
 
         });
     </script>

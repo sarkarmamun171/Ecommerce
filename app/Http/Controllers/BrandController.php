@@ -59,12 +59,11 @@ class BrandController extends Controller
                 'brand_name'=>$request->brand_name,
                 'updated_at'=>Carbon::now(),
             ]);
-
             return back()->with('success','Brand updated Successfully!');
         }else{
             $current_img = public_path('uploads/brand/'.$brand->brand_logo);
             unlink($current_img);
-
+            
             $logo = $request->brand_logo;
             $extnesion = $logo->extension();
             $file_name = Str::lower(str_replace(' ', '_', $request->brand_name)).'.'.$extnesion;

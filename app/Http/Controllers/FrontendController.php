@@ -22,7 +22,7 @@ class FrontendController extends Controller
 {
     function index(){
         // return view('welcome');
-        // return view('frontend.master');
+        return view('frontend.master');
         $categories = Category::all();
         $products = Products::where('status', 1)->latest()->get();
 

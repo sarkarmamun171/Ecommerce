@@ -39,15 +39,6 @@
             display: block;
         }
 
-        #arif{
-            position: absolute;
-            left: 0px;
-            top: 0px;
-            z-index: 999999;
-        }
-
-
-
     </style>
 </head>
 
@@ -525,7 +516,7 @@
             var sorting = $('.sorting').val();
             var link = "{{ route('shop') }}"+"?search_input="+search_input+"&category_id="+category_id+"&min="+min+"&max="+max+"&sorting="+sorting+"&top_catid="+top_catid;
             window.location.href = link;
-        })
+        }) 
         $('.search-btn2').click(function(){
             var search_input2 = $('#search_input2').val();
             var link = "{{ route('shop') }}"+"?search_input="+search_input2;

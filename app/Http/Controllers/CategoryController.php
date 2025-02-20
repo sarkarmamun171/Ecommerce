@@ -10,6 +10,7 @@ use Illuminate\Validation\Rule;
 use Illuminate\Validation\Rules\File;
 use Illuminate\Support\Str;
 use Intervention\Image\Facades\Image;
+use Illuminate\Support\Facades\File; 
 // use Image;
 
 class CategoryController extends Controller
@@ -29,7 +30,7 @@ class CategoryController extends Controller
                 'required',
                 'image',
                 File::image()
-                    ->types(['png', 'jpg', 'jpeg'])
+                    ->types(['png','jpg','jpeg'])
                     ->min(1)
                     ->max(500)
                     ->dimensions(
